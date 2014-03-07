@@ -26,7 +26,7 @@ public class AccountTest {
 
 	@Test(expected = IllegalStateException.class)
 	public void testOverdraftProtectionOf200Dollars() {
-		Account account = new Account(createBigDecimal(200.1));
+		Account account = new Account(createBigDecimal(199.99));
 
 		account.deposit(createBigDecimal(-400.00));
 	}
